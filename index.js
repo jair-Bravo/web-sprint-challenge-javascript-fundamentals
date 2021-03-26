@@ -75,9 +75,13 @@ const zooAnimals = [
   
   
   
-  function lowerCaseNames(){
-    
-  }
+  function lowerCaseNames(lowercase){
+  const newLowerCase = lowercase.map(function(item){
+    return item.animal_name.toLowerCase();
+  })  
+  return newLowerCase;
+}
+  
     
   
   
@@ -87,7 +91,10 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+    array = [];
+    const newArray = array.filter(function(item){
+      return item.population < 5;
+      });
   }
   
 
@@ -204,7 +211,6 @@ class CuboidMakerTwo{
     this.width = sides.width;
     this.height = sides.height;
   }
-
   volume() {
    return this.length * this.width * this.height;
   }
